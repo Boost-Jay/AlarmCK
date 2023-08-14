@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="AlarmCK_0729" customModuleProvider="target">
+            <connections>
+                <outlet property="btnDelete" destination="0Z9-lU-lN3" id="sWG-lp-6Fz"/>
+                <outlet property="dpTime" destination="7cb-K0-lv1" id="u9S-3v-12e"/>
+                <outlet property="tvToolBox" destination="keY-1T-Aiu" id="dk3-KR-UL3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="keY-1T-Aiu">
+                    <rect key="frame" x="16" y="290.66666666666669" width="361" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="rpn-Ir-hOa"/>
+                    </constraints>
+                    <color key="separatorColor" red="0.97666626071503793" green="0.98877046553424552" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <color key="sectionIndexTrackingBackgroundColor" systemColor="systemBlueColor"/>
+                </tableView>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="7cb-K0-lv1">
+                    <rect key="frame" x="16" y="73.999999999999986" width="361" height="221.66666666666663"/>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Z9-lU-lN3">
+                    <rect key="frame" x="16" y="470.66666666666669" width="361" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="tGB-dH-PGc"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemRedColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="刪除鬧鐘"/>
+                    <connections>
+                        <action selector="btnDeleteTapped:" destination="-1" eventType="touchUpInside" id="5Hq-Vi-lHp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Z9-lU-lN3" secondAttribute="trailing" constant="16" id="06o-uE-bk6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7cb-K0-lv1" secondAttribute="trailing" constant="16" id="32v-RV-Fzz"/>
+                <constraint firstItem="keY-1T-Aiu" firstAttribute="top" secondItem="7cb-K0-lv1" secondAttribute="bottom" constant="-5" id="4X5-8q-CSC"/>
+                <constraint firstItem="7cb-K0-lv1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="f9v-5S-nWh"/>
+                <constraint firstItem="0Z9-lU-lN3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hAP-aP-M14"/>
+                <constraint firstItem="keY-1T-Aiu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jCN-Dx-ok3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="keY-1T-Aiu" secondAttribute="trailing" constant="16" id="mcd-IE-UbD"/>
+                <constraint firstItem="7cb-K0-lv1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="sMN-wD-Xe5"/>
+                <constraint firstItem="7cb-K0-lv1" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.26" id="tmb-0X-ly6"/>
+                <constraint firstItem="0Z9-lU-lN3" firstAttribute="top" secondItem="keY-1T-Aiu" secondAttribute="bottom" constant="30" id="u1O-gW-RCa"/>
+            </constraints>
+            <point key="canvasLocation" x="-25.190839694656489" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
